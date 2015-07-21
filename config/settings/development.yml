@@ -1,0 +1,5 @@
+Twitter:
+      AppId: "<insert a new value after registering @ twitter>"
+      AppSecret: "<insert a new value after registering @ twitter>"
+      ConsumerKey: "<insert a new value after registering @ twitter>"
+      ConsumerSecret: "<insert a new value after registering @ twitter>"

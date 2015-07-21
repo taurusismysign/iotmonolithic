@@ -1,0 +1,64 @@
+<%if @tweets.present? %>
+    <div class="row" id="div_live_stories" style="margin-left: 15px;">
+      <div class="col-md-12 news-page">
+        <div class="space20"></div>
+        <div class="row" id="bindingdiv">
+          <div class="col-md-4 card-holder-singlecol" id="allstories1">
+            <%= render :partial => "index",:locals =>{:tweets =>@tweets,:gi=>0} %>
+          </div>
+          <div class="col-md-4 card-holder-singlecol" id="allstories2">
+            <%= render :partial => "index",:locals =>{:tweets =>@tweets,:gi=>1} %>
+          </div>
+          <div class="col-md-4 card-holder-singlecol" id="allstories3">
+            <%= render :partial => "index",:locals =>{:tweets =>@tweets,:gi=>2} %>
+          </div>
+        </div>
+        <div class="space20"></div>
+      </div>
+
+    </div>
+
+<%end%>
+<div id="formlogin" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modal-bordered">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title" >
+          <span id="user_modal_title">Top Tweets from Top Handles!</span>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="div_existing_user_login" style="margin-left: 10px;">
+          <form accept-charset="UTF-8" class="form-horizontal login-form" id="form_existing_user">
+            <div style="font-size: 14px;">
+              After you signup, you could customize experts in these categories. We will then normalize these experts across all the users so that you can explore relevant content in real-time.
+            </div>
+            <br />
+            <div class="form-body">
+              <div class="form-group">
+                <label class="col-md-3 control-label">Your Email</label>
+                <div class="col-md-6">
+                  <input autofocus="autofocus" class="form-control" id="user_emaile" name="user[emaile]" placeholder="We don't know what spamming is!" type="email" value="" />
+                </div>
+              </div>
+              <div class="form-actions clearfix">
+                <a href="javascript:void(0)" class="btn blue" id="btn_ajax_user_waitlist"> Add me to waitlist </a>
+                <a style="padding-left:10px;color: #999999;" href="javascript:void(0)" id="btn_ajax_user_no_thankyou">No, thanks!</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="div_tweet_aftersignup" style="margin-left: 10px;display: none;">
+            <div>
+              Congratulations! You have been added to the list and shall soon receive an invitation. Meanwhile spread the love!
+            </div>
+            <br>
+            <div>
+              <a href="https://twitter.com/intent/tweet?text=I found InternetOfTweets.com provides simpler interface to consume revelant tweets - Checkout &url=http://internetoftweets.com&via=netcurate"> Tweet about InternetOfTweets! </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

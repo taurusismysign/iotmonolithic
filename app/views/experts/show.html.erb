@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Handle:</strong>
+  <%= @expert.handle %>
+</p>
+
+<p>
+  <strong>Tweet category:</strong>
+  <%= @expert.tweet_category_id %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @expert.sequence_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expert.user_id %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @expert.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_expert_path(@expert) %> |
+<%= link_to 'Back', experts_path %>
